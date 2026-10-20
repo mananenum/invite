@@ -2,369 +2,210 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mehreen &amp; Adil Invitation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ahmed Hussain · Wedding Invitation</title>
+<meta name="description" content="Wedding invitation · Masnad Nashini and Dawat-e-Walima, Srinagar, May 2027">
+<meta name="theme-color" content="#E9E2D3">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Gulzar&family=Jost:wght@300;400;500&family=Noto+Nastaliq+Urdu:wght@400;600&display=block">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri&family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Gulzar&family=Noto+Nastaliq+Urdu:wght@400;600&display=swap">
 <style>
-  /* Layout: one tall phone-width card. A Mughal arch frames Dal Lake at dusk, then the English invitation, a chinar-leaf seam, and the Urdu invitation. Single dark theme, like a lacquered papier-mache box. */
+  /* Layout: the print card's Mughal arch crowned with a chinar branch, then one centred column. Warm, muted ivory (not white), emerald ink, antique gold, chinar red. Static: no animation. */
   :root {
-    --night: #0A1322;
-    --lake: #13233A;
-    --saffron: #E2A246;
-    --chinar: #C2452D;
-    --snow: #F3EEE4;
-    --mist: #A9B8CC;
-    --line: rgba(226, 162, 70, 0.55);
-    --line-soft: rgba(226, 162, 70, 0.24);
+    --ground: #E9E2D3;
+    --paper: #F4EEE1;
+    --ink: #24302D;
+    --emerald: #1D4A44;
+    --soft: #59605A;
+    --gold: #94743A;
+    --line: rgba(148, 116, 58, 0.45);
+    --faint: rgba(148, 116, 58, 0.22);
+    --chinar: #A3412E;
     --display: "Cormorant Garamond", Georgia, serif;
-    --body: "Jost", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+    --caps: "Cinzel", Georgia, serif;
     --urdu: "Noto Nastaliq Urdu", "DecoType Nastaleeq Urdu", serif;
     --urdu-display: "Gulzar", "Noto Nastaliq Urdu", serif;
     --arabic: "Amiri", "Geeza Pro", serif;
+    color-scheme: light;
   }
   * { box-sizing: border-box; }
-  html, body { margin: 0; }
+  [hidden] { display: none !important; }
+  html { background: var(--ground); }
   body {
-    max-width: 540px;
-    margin: 0 auto;
-    background-color: var(--night);
-    background-image:
-      radial-gradient(80% 30% at 50% 0%, rgba(226, 162, 70, 0.10), transparent 70%),
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='none' stroke='%23E2A246' stroke-opacity='0.09'%3E%3Cpath d='M18 18h20v20H18z'/%3E%3Cpath d='M28 13.86 42.14 28 28 42.14 13.86 28z'/%3E%3Cpath d='M0 28h13.86M42.14 28H56M28 0v13.86M28 42.14V56'/%3E%3C/g%3E%3C/svg%3E");
-    color: var(--snow);
-    font-family: var(--body);
-    font-size: 17px;
-    line-height: 1.6;
-    padding: 28px 22px 30px;
+    margin: 0; min-height: 100vh;
+    background-color: var(--ground);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='none' stroke='%2394743A' stroke-opacity='0.12'%3E%3Cpath d='M18 18h20v20H18z'/%3E%3Cpath d='M28 13.86 42.14 28 28 42.14 13.86 28z'/%3E%3Cpath d='M0 28h13.86M42.14 28H56M28 0v13.86M28 42.14V56'/%3E%3C/g%3E%3C/svg%3E");
+    color: var(--ink); font-family: var(--display); font-size: 18px; line-height: 1.5;
+    padding-inline: 14px;
+    padding-block: max(16px, env(safe-area-inset-top)) max(34px, env(safe-area-inset-bottom));
+    -webkit-font-smoothing: antialiased;
   }
-  html { background-color: var(--night);
-  }
-  .card { position: relative; }
-  .crown { position: relative; }
-  .crown svg.scene { display: block; width: 100%; height: auto; }
-  .leaf { position: absolute; display: block; }
-  .arch-outer { stroke: var(--line); }
-  .arch-inner { stroke: var(--line-soft); }
+  .wrap { max-width: 470px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
 
+  .switch { align-self: center; display: inline-flex; align-items: center; gap: 14px; }
+  .switch button { font-family: var(--caps); font-size: 11.5px; letter-spacing: .26em; color: var(--soft); background: none; border: 0; padding: 6px 2px; cursor: pointer; border-bottom: 1px solid transparent; }
+  .switch button[lang="ur"] { font-family: var(--urdu); letter-spacing: 0; font-size: 15px; line-height: 1.6; padding-block: 0 4px; }
+  .switch button[aria-pressed="true"] { color: var(--emerald); border-bottom-color: var(--gold); }
+  .switch button:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
+  .switch i { width: 4px; height: 4px; transform: rotate(45deg); background: var(--gold); }
+
+  .card { position: relative; filter: drop-shadow(0 18px 30px rgba(60, 45, 20, .16)); }
+  .crown svg { display: block; width: 100%; height: auto; }
+  .a-outer { stroke: var(--gold); }
+  .a-inner { stroke: var(--faint); }
   .panel {
-    position: relative;
-    background: var(--lake);
-    border: 1px solid var(--line);
-    border-top: 0;
-    border-bottom: 0;
-    padding: 6px 34px 40px;
-    display: flex; flex-direction: column; align-items: center; gap: 22px;
-    text-align: center;
+    position: relative; background: var(--paper);
+    border: 1px solid var(--gold); border-top: 0;
+    padding: 0 34px 46px;
+    display: flex; flex-direction: column; align-items: center; text-align: center;
   }
-  .panel::before {
-    content: ""; position: absolute; left: 1.625%; right: 1.625%; top: 0; bottom: 0;
-    border-left: 1px solid var(--line-soft); border-right: 1px solid var(--line-soft);
-    pointer-events: none;
-  }
-  .panel.last { border-bottom: 1px solid var(--line); padding-bottom: 46px; }
-  .panel.last::before { bottom: 7px; border-bottom: 1px solid var(--line-soft); }
+  .panel::before { content: ""; position: absolute; left: 1.52%; right: 1.52%; top: 0; bottom: 7px; border: 1px solid var(--faint); border-top: 0; pointer-events: none; }
 
-  .opening { display: flex; flex-direction: column; align-items: center; }
-  .bismillah { margin: 0; font-family: var(--arabic); font-size: 30px; line-height: 1.7; color: var(--saffron); }
-  .gloss { margin: 0; font-size: 13px; color: var(--mist); letter-spacing: 0.03em; }
+  .bism { margin: 0; font-family: var(--arabic); font-size: clamp(28px, 8vw, 36px); line-height: 1.7; color: var(--gold); white-space: nowrap; }
+  .grace { margin: 2px 0 0; font-style: italic; font-size: 18px; color: var(--soft); }
+  .hosts { margin: 18px 0 0; font-weight: 700; font-size: 25px; line-height: 1.15; color: var(--emerald); }
+  .caps { font-family: var(--caps); font-size: 11.5px; letter-spacing: .28em; color: var(--gold); text-transform: uppercase; }
+  .place { margin: 6px 0 0; }
+  .request { margin: 14px 0 0; font-size: 19px; line-height: 1.42; color: var(--soft); max-width: 26ch; text-wrap: balance; }
+  .name { margin: 12px 0 0; font-style: italic; font-weight: 500; font-size: clamp(46px, 13.5vw, 62px); line-height: 1.08; color: var(--emerald); }
+  .divider { display: flex; align-items: center; gap: 12px; width: 62%; margin-top: 16px; color: var(--chinar); }
+  .divider::before, .divider::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  .divider svg { width: 16px; height: 16px; }
+  .venue-k { margin: 18px 0 0; font-family: var(--caps); font-size: 15px; letter-spacing: .24em; text-transform: uppercase; color: var(--emerald); }
+  .venue { margin: 4px 0 0; font-size: 19px; color: var(--soft); }
+  .map { margin-top: 10px; text-decoration: none; padding-bottom: 3px; border-bottom: 1px solid var(--line); }
+  .map:hover, .map:focus-visible { color: var(--emerald); border-color: var(--emerald); outline: none; }
+  .label { margin: 26px 0 0; }
 
-  .hosts { margin: 0; display: flex; flex-direction: column; gap: 2px; font-family: var(--display); font-size: 23px; font-weight: 600; line-height: 1.3; }
-  .hosts .and { font-style: italic; font-weight: 400; font-size: 19px; color: var(--saffron); }
-  .request { margin: 0; max-width: 30ch; color: var(--mist); font-weight: 300; font-size: 17px; }
+  .events { margin-top: 12px; width: 100%; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .event { padding-block: 18px; display: flex; flex-direction: column; align-items: center; gap: 2px; }
+  .event + .event { border-top: 1px solid var(--faint); }
+  .event h3 { margin: 0 0 4px; font-weight: 700; font-size: 26px; line-height: 1.15; color: var(--emerald); }
+  .event .date { font-size: 23px; line-height: 1.2; }
+  .event .time { font-size: 19px; color: var(--soft); font-variant-numeric: lining-nums; }
+  .event .time .caps { margin-inline-end: 8px; font-size: 10.5px; }
+  .event .times { display: flex; flex-wrap: wrap; justify-content: center; column-gap: 22px; }
 
-  .names { margin: 0; font-family: var(--display); font-style: italic; font-weight: 500; line-height: 0.95; display: flex; flex-direction: column; align-items: center; }
-  .names span { font-size: clamp(56px, 17vw, 80px); }
-  .names .amp { font-size: 34px; color: var(--saffron); margin-block: 4px; }
-
-  .divider { display: flex; align-items: center; gap: 14px; width: 100%; color: var(--saffron); }
-  .divider::before, .divider::after { content: ""; flex: 1; height: 1px; background: var(--line-soft); }
-  .divider svg { width: 20px; height: 20px; }
-
-  .label { margin: 0; font-size: 13px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--saffron); }
-
-  .events { list-style: none; margin: 0; padding: 0; width: 100%; text-align: start; }
-  .events li { display: grid; grid-template-columns: 64px 1fr; gap: 18px; padding-block: 18px; border-top: 1px solid var(--line-soft); align-items: start; }
-  .events li:last-child { border-bottom: 1px solid var(--line-soft); }
-  .date { display: flex; flex-direction: column; align-items: center; text-align: center; }
-  .date b { font-family: var(--display); font-weight: 500; font-size: 44px; line-height: 1; color: var(--saffron); font-variant-numeric: lining-nums tabular-nums; }
-  .date span { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--mist); line-height: 1.5; }
-  .what { min-width: 0; }
-  .what h3 { margin: 0; font-family: var(--display); font-weight: 600; font-size: 27px; line-height: 1.15; }
-  .what .desc { margin: 2px 0 0; font-size: 14px; color: var(--saffron); }
-  .what p { margin: 6px 0 0; font-size: 16px; color: var(--mist); }
-  .what .time { color: var(--snow); }
-
-  .closing { margin: 0; font-family: var(--display); font-style: italic; font-size: 25px; line-height: 1.3; max-width: 24ch; text-wrap: balance; }
-  .from { margin: 0; display: flex; flex-direction: column; color: var(--mist); font-size: 15px; }
-  .from b { color: var(--snow); font-family: var(--display); font-weight: 600; font-size: 25px; }
-  .rsvp { display: flex; flex-direction: column; gap: 2px; color: var(--mist); font-size: 15px; }
-  .rsvp .num { color: var(--snow); letter-spacing: 0.04em; font-variant-numeric: tabular-nums; direction: ltr; unicode-bidi: isolate; }
-
-  .couplet { margin: 0; width: 100%; padding-top: 22px; border-top: 1px solid var(--line-soft); }
-  .couplet p { margin: 0; font-family: var(--urdu); font-size: 19px; line-height: 2.3; color: var(--saffron); }
-  .couplet figcaption { font-family: var(--display); font-style: italic; font-size: 19px; color: var(--mist); line-height: 1.35; margin-top: 6px; }
-
-  /* The seam between the two languages */
-  .seam { position: relative; background: var(--lake); border-left: 1px solid var(--line); border-right: 1px solid var(--line); padding: 4px 34px 30px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
-  .seam::before { content: ""; position: absolute; left: 1.625%; right: 1.625%; top: 0; bottom: 0; border-left: 1px solid var(--line-soft); border-right: 1px solid var(--line-soft); }
-  .seam .row { display: flex; align-items: center; gap: 12px; width: 100%; }
-  .seam .row::before, .seam .row::after { content: ""; flex: 1; height: 1px; background: var(--line); }
-  .seam .row span { display: flex; gap: 6px; }
-  .seam svg { width: 22px; height: 22px; }
-  .seam .tag { font-family: var(--urdu); font-size: 18px; color: var(--saffron); line-height: 2.2; }
+  .note { margin: 18px 0 0; font-style: italic; font-size: 19px; line-height: 1.4; color: var(--soft); max-width: 28ch; text-wrap: balance; }
+  .foot { margin-top: 28px; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; text-align: start; }
+  .foot > div { display: flex; flex-direction: column; min-width: 0; }
+  .foot .caps { font-size: 9.5px; letter-spacing: .18em; margin-bottom: 8px; white-space: nowrap; }
+  .foot .v { font-weight: 600; font-size: 18px; line-height: 1.3; color: var(--emerald); }
+  .foot .rsvp { align-items: flex-end; text-align: end; }
+  .foot a { color: var(--ink); text-decoration: none; font-weight: 500; font-size: 19px; letter-spacing: .05em; font-variant-numeric: lining-nums tabular-nums; line-height: 1.35; direction: ltr; unicode-bidi: isolate; }
+  .foot a:hover, .foot a:focus-visible { color: var(--gold); outline: none; }
 
   /* Urdu */
-  [lang="ur"].panel { font-family: var(--urdu); font-size: 16px; line-height: 2.25; gap: 20px; }
-  [lang="ur"] .hosts { font-family: var(--urdu); font-size: 18px; font-weight: 600; line-height: 2.3; gap: 0; }
-  [lang="ur"] .hosts .and { font-style: normal; font-size: 16px; font-weight: 400; }
-  [lang="ur"] .request { font-size: 16px; font-weight: 400; max-width: 28ch; }
-  [lang="ur"] .names { font-family: var(--urdu-display); font-style: normal; font-weight: 400; line-height: 1.6; }
-  [lang="ur"] .names span { font-size: 66px; }
-  [lang="ur"] .names .amp { font-size: 36px; margin-block: 0; }
-  [lang="ur"] .label { letter-spacing: 0; text-transform: none; font-size: 15px; font-weight: 400; }
-  [lang="ur"] .date b { font-family: var(--urdu); font-size: 30px; line-height: 1.9; }
-  [lang="ur"] .date span { letter-spacing: 0; font-size: 13px; line-height: 2.1; }
-  [lang="ur"] .what h3 { font-family: var(--urdu-display); font-weight: 400; font-size: 28px; line-height: 1.8; }
-  [lang="ur"] .what .desc { font-size: 14px; }
-  [lang="ur"] .what p { font-size: 15px; margin-top: 2px; }
-  [lang="ur"] .closing { font-family: var(--urdu); font-style: normal; font-size: 19px; line-height: 2.3; max-width: 26ch; }
-  [lang="ur"] .from { font-size: 15px; }
-  [lang="ur"] .from b { font-family: var(--urdu-display); font-weight: 400; font-size: 28px; line-height: 1.8; }
-  [lang="ur"] .rsvp { font-size: 15px; }
+  .panel[lang="ur"] { font-family: var(--urdu); }
+  .panel[lang="ur"] .grace { font-style: normal; font-size: 16px; line-height: 2.2; }
+  .panel[lang="ur"] .hosts { font-family: var(--urdu); font-weight: 600; font-size: 20px; line-height: 2.3; margin-top: 10px; }
+  .panel[lang="ur"] .caps, .panel[lang="ur"] .venue-k { font-family: var(--urdu); letter-spacing: 0; text-transform: none; }
+  .panel[lang="ur"] .caps { font-size: 14px; line-height: 2.1; }
+  .panel[lang="ur"] .request { font-size: 17px; line-height: 2.3; margin-top: 6px; }
+  .panel[lang="ur"] .name { font-family: var(--urdu-display); font-style: normal; font-weight: 400; font-size: clamp(46px, 13vw, 58px); line-height: 1.75; margin-top: 4px; }
+  .panel[lang="ur"] .venue-k { font-size: 19px; font-weight: 600; line-height: 2.1; }
+  .panel[lang="ur"] .venue { font-size: 16px; line-height: 2.2; }
+  .panel[lang="ur"] .map { padding-bottom: 0; }
+  .panel[lang="ur"] .label { margin-top: 18px; }
+  .panel[lang="ur"] .event { padding-block: 12px; }
+  .panel[lang="ur"] .event h3 { font-family: var(--urdu-display); font-weight: 400; font-size: 27px; line-height: 1.9; margin: 0; }
+  .panel[lang="ur"] .event .date { font-size: 17px; line-height: 2.2; }
+  .panel[lang="ur"] .event .time { font-size: 16px; line-height: 2.2; }
+  .panel[lang="ur"] .event .time .caps { font-size: 13px; }
+  .panel[lang="ur"] .note { font-style: normal; font-size: 16px; line-height: 2.3; }
+  .panel[lang="ur"] .foot .caps { font-size: 13px; margin: 0; }
+  .panel[lang="ur"] .foot .v { font-family: var(--urdu); font-size: 16px; line-height: 2.2; }
 
-  .sample { margin: 18px 0 0; text-align: center; font-size: 12px; color: var(--mist); opacity: 0.75; }
+  @media (max-width: 370px) { .panel { padding-inline: 26px; } .foot { grid-template-columns: 1fr; } .foot .rsvp { align-items: flex-start; text-align: start; } }
 </style>
 </head>
 <body>
-<article class="card">
-  <div class="crown">
-    <svg class="scene" viewBox="0 0 400 300" role="img" aria-label="Dal Lake at dusk framed by a Mughal arch, with a shikara, a houseboat, snow peaks and a chinar tree in autumn">
-      <defs>
-        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#15224A"/>
-          <stop offset=".45" stop-color="#2E3468"/>
-          <stop offset=".78" stop-color="#8C5878"/>
-          <stop offset="1" stop-color="#EBA45E"/>
-        </linearGradient>
-        <radialGradient id="glow" cx=".5" cy=".5" r=".5">
-          <stop offset="0" stop-color="#FFD08A" stop-opacity=".7"/>
-          <stop offset="1" stop-color="#FFD08A" stop-opacity="0"/>
-        </radialGradient>
-        <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#5A4A70"/>
-          <stop offset=".35" stop-color="#2A3559"/>
-          <stop offset="1" stop-color="#13233A"/>
-        </linearGradient>
-        <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#13233A" stop-opacity="0"/>
-          <stop offset="1" stop-color="#13233A"/>
-        </linearGradient>
-        <clipPath id="archClip"><path d="M6.5 300V159C6.5 100 122 82 200 24C278 82 393.5 100 393.5 159V300Z"/></clipPath>
-        <mask id="moonMask"><circle cx="122" cy="112" r="10" fill="#fff"/><circle cx="127.5" cy="108" r="9" fill="#000"/></mask>
-        <symbol id="chinar" viewBox="0 0 100 100">
-          <path fill="currentColor" d="M50 80L38 82L24 90L28 76L8 72L22 62L4 44L26 48L22 28L36 40L38 16L46 30L50 2L54 30L62 16L64 40L78 28L74 48L96 44L78 62L92 72L72 76L76 90L62 82Z"/>
-          <path d="M50 80V99" stroke="currentColor" stroke-width="3" fill="none"/>
-          <path d="M50 80V12M50 70L26 46M50 70L74 46M50 76L14 66M50 76L86 66" stroke="#000" stroke-opacity=".25" stroke-width="1.6" fill="none"/>
-        </symbol>
-      </defs>
-
-      <path d="M0.5 300V158C0.5 94 118 74 200 16C282 74 399.5 94 399.5 158V300Z" fill="#13233A"/>
-      <g clip-path="url(#archClip)">
-        <rect width="400" height="201" fill="url(#sky)"/>
-        <circle cx="262" cy="196" r="115" fill="url(#glow)"/>
-        <g fill="#F4EAD5">
-          <circle cx="176" cy="60" r="1"/><circle cx="222" cy="52" r=".9"/><circle cx="150" cy="90" r="1.1"/>
-          <circle cx="252" cy="78" r=".8"/><circle cx="300" cy="106" r="1"/><circle cx="84" cy="130" r=".9"/>
-          <circle cx="334" cy="128" r=".8"/><circle cx="196" cy="94" r=".7"/><circle cx="62" cy="150" r=".7"/>
-        </g>
-        <circle cx="122" cy="112" r="22" fill="#F6E7C8" opacity=".08"/>
-        <circle cx="122" cy="112" r="10" fill="#F6E7C8" mask="url(#moonMask)"/>
-
-        <polygon fill="#56638F" points="0,200 0,146 24,140 46,128 66,134 92,112 112,104 128,114 150,108 172,94 190,88 206,100 226,96 244,106 262,98 284,110 306,104 330,118 352,112 376,126 400,122 400,200"/>
-        <g fill="#E7E5F2" opacity=".9">
-          <polygon points="104,110 112,104 120,111 115,109 111,113 107,110"/>
-          <polygon points="180,96 190,88 200,95 195,94 190,99 186,95"/>
-          <polygon points="220,100 226,96 233,101 229,100 226,103"/>
-          <polygon points="255,103 262,98 270,104 265,102 261,105"/>
-        </g>
-        <polygon fill="#323F6B" points="0,200 0,168 22,160 48,166 78,146 104,156 132,148 160,162 190,150 214,158 244,140 272,154 300,148 326,160 356,150 380,158 400,154 400,200"/>
-        <polygon fill="#E7E5F2" opacity=".75" points="238,145 244,140 251,146 247,145 244,148"/>
-        <path fill="#1C2747" d="M0 200V188Q40 180 84 187T168 185T252 189T336 183T400 187V200Z"/>
-
-        <g fill="#18223F">
-          <ellipse cx="108" cy="178" rx="3" ry="13"/><ellipse cx="116" cy="181" rx="2.5" ry="10"/><ellipse cx="123" cy="183" rx="2" ry="8"/>
-        </g>
-        <rect x="364" y="176" width="5" height="22" fill="#1A2340"/>
-        <g fill="#A33D29">
-          <circle cx="366" cy="164" r="20"/><circle cx="348" cy="172" r="14"/><circle cx="384" cy="172" r="15"/>
-          <circle cx="358" cy="152" r="12"/><circle cx="376" cy="150" r="11"/>
-        </g>
-        <g fill="#D46A3C" opacity=".75">
-          <circle cx="360" cy="157" r="7"/><circle cx="374" cy="162" r="6"/><circle cx="351" cy="170" r="5"/><circle cx="382" cy="170" r="5"/>
-        </g>
-        <g fill="#7E2E21" opacity=".6"><circle cx="370" cy="177" r="8"/><circle cx="352" cy="180" r="5"/></g>
-
-        <rect y="200" width="400" height="100" fill="url(#water)"/>
-        <rect y="199.5" width="400" height="1" fill="#F2B866" opacity=".25"/>
-        <g transform="translate(0 400) scale(1 -1)" opacity=".35"><polygon fill="#323F6B" points="0,200 0,168 22,160 48,166 78,146 104,156 132,148 160,162 190,150 214,158 244,140 272,154 300,148 326,160 356,150 380,158 400,154 400,200"/></g>
-        <ellipse cx="366" cy="222" rx="30" ry="16" fill="#A33D29" opacity=".22"/>
-        <g fill="#F2B866">
-          <rect x="240" y="206" width="40" height="1.2" opacity=".5"/><rect x="248" y="212" width="24" height="1" opacity=".42"/>
-          <rect x="236" y="219" width="46" height="1" opacity=".34"/><rect x="252" y="227" width="16" height="1" opacity=".3"/>
-          <rect x="242" y="236" width="32" height="1" opacity=".24"/><rect x="254" y="246" width="12" height="1" opacity=".18"/>
-        </g>
-
-        <g>
-          <path fill="#121B33" d="M26 185L32 180H86L92 185Z"/>
-          <path fill="#121B33" d="M56 180L59 175.5L62 180Z"/>
-          <rect x="28" y="185" width="62" height="8" fill="#182240"/>
-          <rect x="24" y="193" width="70" height="6" fill="#121B33"/>
-          <g fill="#F5BE6A">
-            <rect x="32" y="187.5" width="3" height="2.6"/><rect x="40" y="187.5" width="3" height="2.6"/><rect x="48" y="187.5" width="3" height="2.6"/>
-            <rect x="56" y="187.5" width="3" height="2.6"/><rect x="64" y="187.5" width="3" height="2.6"/><rect x="72" y="187.5" width="3" height="2.6"/><rect x="80" y="187.5" width="3" height="2.6"/>
-          </g>
-          <g fill="#F5BE6A" opacity=".3">
-            <rect x="33" y="203" width="1.2" height="7"/><rect x="41" y="204" width="1.2" height="6"/><rect x="49" y="203" width="1.2" height="8"/>
-            <rect x="57" y="204" width="1.2" height="6"/><rect x="65" y="203" width="1.2" height="7"/><rect x="73" y="204" width="1.2" height="6"/><rect x="81" y="203" width="1.2" height="7"/>
-          </g>
-        </g>
-
-        <g transform="translate(0 486) scale(1 -1)" opacity=".22" fill="#0A1322">
-          <path d="M144 229Q154 242 182 243H232Q258 242 268 227Q253 237 232 238H182Q158 238 144 229Z"/>
-          <path d="M178 221Q207 214 236 221V224H178Z"/>
-        </g>
-        <ellipse cx="206" cy="245" rx="76" ry="3.5" fill="none" stroke="#F2B866" stroke-opacity=".2"/>
-        <ellipse cx="206" cy="247" rx="100" ry="5.5" fill="none" stroke="#F2B866" stroke-opacity=".1"/>
-        <circle cx="207" cy="231" r="7" fill="#FFC979" opacity=".28"/>
-        <circle cx="207" cy="231" r="2" fill="#FFD08A"/>
-        <g fill="#0A1322">
-          <path d="M144 229Q154 242 182 243H232Q258 242 268 227Q253 237 232 238H182Q158 238 144 229Z"/>
-          <path d="M178 221Q207 214 236 221V224H178Z"/>
-          <path d="M178 224Q182 228.5 186 224Q190 228.5 194 224Q198 228.5 202 224Q206 228.5 210 224Q214 228.5 218 224Q222 228.5 226 224Q230 228.5 234 224H236Z"/>
-          <rect x="179" y="224" width="1.5" height="14"/><rect x="197.5" y="224" width="1.5" height="14"/>
-          <rect x="216.5" y="224" width="1.5" height="14"/><rect x="234" y="224" width="1.5" height="14"/>
-          <path d="M157 238L160 225H166L169 238Z"/>
-          <circle cx="163" cy="221.5" r="3.2"/>
-          <path d="M167 227L149 249.5" stroke="#0A1322" stroke-width="1.4"/>
-          <path d="M148 256C143 252 143 247 146.5 247C148 247 148 248.5 148 249.5C148 248.5 148 247 149.5 247C153 247 153 252 148 256Z"/>
-        </g>
-        <rect y="252" width="400" height="48" fill="url(#fade)"/>
-      </g>
-      <path class="arch-outer" d="M0.5 300V158C0.5 94 118 74 200 16C282 74 399.5 94 399.5 158V300" fill="none" stroke-width="1" vector-effect="non-scaling-stroke"/>
-      <path class="arch-inner" d="M6.5 300V159C6.5 100 122 82 200 24C278 82 393.5 100 393.5 159V300" fill="none" stroke-width="1" vector-effect="non-scaling-stroke"/>
-      <path d="M200 0L204.5 7L200 13L195.5 7Z" fill="#E2A246"/>
-    </svg>
-    <svg class="leaf" style="left:16%;top:26%;width:20px;height:20px;color:#C2452D;transform:rotate(-24deg)"><use href="#chinar"/></svg>
-    <svg class="leaf" style="left:70%;top:14%;width:15px;height:15px;color:#E2A246;transform:rotate(38deg)"><use href="#chinar"/></svg>
-    <svg class="leaf" style="left:46%;top:36%;width:13px;height:13px;color:#D4683A;transform:rotate(130deg)"><use href="#chinar"/></svg>
-    <svg class="leaf" style="left:84%;top:40%;width:17px;height:17px;color:#C2452D;transform:rotate(-70deg)"><use href="#chinar"/></svg>
-    <svg class="leaf" style="left:30%;top:52%;width:12px;height:12px;color:#E2A246;transform:rotate(200deg)"><use href="#chinar"/></svg>
+<div class="wrap">
+  <div class="switch" role="group" aria-label="Language">
+    <button type="button" data-lang="en" aria-pressed="true">ENGLISH</button><i aria-hidden="true"></i><button type="button" data-lang="ur" lang="ur" aria-pressed="false">اردو</button>
   </div>
-
-  <!-- English -->
-  <section class="panel" lang="en">
-    <div class="opening">
-      <p class="bismillah" lang="ar" dir="rtl">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</p>
-      <p class="gloss">In the name of Allah, the Most Gracious, the Most Merciful</p>
+  <article class="card">
+    <div class="crown">
+      <svg viewBox="0 0 115 56" role="img" aria-label="A Mughal arch crowned with a branch of autumn chinar leaves">
+        <defs>
+          <symbol id="chinar" viewBox="0 0 100 100">
+            <path fill="currentColor" d="M50 80L38 82L24 90L28 76L8 72L22 62L4 44L26 48L22 28L36 40L38 16L46 30L50 2L54 30L62 16L64 40L78 28L74 48L96 44L78 62L92 72L72 76L76 90L62 82Z"/>
+            <path d="M50 80V99" stroke="currentColor" stroke-width="3" fill="none"/>
+            <path d="M50 80V12M50 70L26 46M50 70L74 46M50 76L14 66M50 76L86 66" stroke="#F4EEE1" stroke-opacity=".45" stroke-width="2" fill="none"/>
+          </symbol>
+        </defs>
+        <path d="M0.25 56V48C0.25 32 31 26 57.5 9C84 26 114.75 32 114.75 48V56Z" fill="#F4EEE1"/>
+        <path class="a-outer" d="M0.25 56V48C0.25 32 31 26 57.5 9C84 26 114.75 32 114.75 48V56" fill="none" stroke-width="1" vector-effect="non-scaling-stroke"/>
+        <path class="a-inner" d="M2 56V49C2 34 32.5 28 57.5 11.5C82.5 28 113 34 113 49V56" fill="none" stroke-width="1" vector-effect="non-scaling-stroke"/>
+        <path d="M57.5 2.6L59.4 5.5L57.5 8.2L55.6 5.5Z" fill="#94743A"/><circle cx="57.5" cy="0.9" r=".7" fill="#94743A"/>
+        <path d="M21 40.5Q39 26 57.5 25.5T94 40" fill="none" stroke="#5A3A29" stroke-width=".55" stroke-linecap="round"/>
+        <path d="M49 27Q48 31 49 33.5M68 27Q69 30.5 68 33.2" fill="none" stroke="#5A3A29" stroke-width=".35"/>
+        <g transform="translate(27 36.5) rotate(-50)"><use href="#chinar" x="-3.75" y="-3.75" width="7.5" height="7.5" style="color:#A3412E"/></g><g transform="translate(36 30.5) rotate(-20)"><use href="#chinar" x="-3.25" y="-3.25" width="6.5" height="6.5" style="color:#B9583A"/></g><g transform="translate(45 26.8) rotate(5)"><use href="#chinar" x="-3.75" y="-3.75" width="7.5" height="7.5" style="color:#A3412E"/></g><g transform="translate(54 23.5) rotate(30)"><use href="#chinar" x="-3.0" y="-3.0" width="6" height="6" style="color:#A8843A"/></g><g transform="translate(63 23.8) rotate(-10)"><use href="#chinar" x="-3.9" y="-3.9" width="7.8" height="7.8" style="color:#8E3424"/></g><g transform="translate(72 26.5) rotate(25)"><use href="#chinar" x="-3.2" y="-3.2" width="6.4" height="6.4" style="color:#B9583A"/></g><g transform="translate(81 30.5) rotate(50)"><use href="#chinar" x="-3.5" y="-3.5" width="7" height="7" style="color:#A3412E"/></g><g transform="translate(89 36) rotate(70)"><use href="#chinar" x="-2.8" y="-2.8" width="5.6" height="5.6" style="color:#A8843A"/></g><g transform="translate(49 33.5) rotate(160)"><use href="#chinar" x="-2.3" y="-2.3" width="4.6" height="4.6" style="color:#A8843A"/></g><g transform="translate(68 33.2) rotate(200)"><use href="#chinar" x="-2.4" y="-2.4" width="4.8" height="4.8" style="color:#A3412E"/></g><g transform="translate(37 44) rotate(130)"><use href="#chinar" x="-2" y="-2" width="4" height="4" style="color:#B9583A"/></g><g transform="translate(80 45.5) rotate(-40)"><use href="#chinar" x="-1.7" y="-1.7" width="3.4" height="3.4" style="color:#A8843A"/></g>
+      </svg>
     </div>
-    <p class="hosts"><span>Mrs. Shabnam &amp; Mr. Bashir Ahmad Wani</span><span class="and">and</span><span>Mrs. Rubina &amp; Mr. Farooq Ahmad Mir</span></p>
-    <p class="request">request the pleasure of your company, with family, at the Nikah of their children</p>
-    <h1 class="names"><span>Mehreen</span><span class="amp">&amp;</span><span>Adil</span></h1>
-    <div class="divider" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#chinar"/></svg></div>
-    <p class="label">Srinagar · October 2027</p>
-    <ul class="events">
-      <li>
-        <div class="date"><b>14</b><span>Oct</span><span>Thu</span></div>
-        <div class="what">
-          <h3>Maenziraat</h3>
-          <p class="desc">Henna night</p>
-          <p class="time">7:00 PM onwards</p>
-          <p>Wani House, Rajbagh, Srinagar</p>
-        </div>
-      </li>
-      <li>
-        <div class="date"><b>15</b><span>Oct</span><span>Fri</span></div>
-        <div class="what">
-          <h3>Nikah &amp; Wazwan</h3>
-          <p class="desc">The wedding, followed by a traditional Kashmiri feast</p>
-          <p class="time">Nikah after Asr prayer · Wazwan at 7:30 PM</p>
-          <p>Dal View Lawns, Boulevard Road, Srinagar</p>
-        </div>
-      </li>
-      <li>
-        <div class="date"><b>16</b><span>Oct</span><span>Sat</span></div>
-        <div class="what">
-          <h3>Walima</h3>
-          <p class="desc">Reception</p>
-          <p class="time">1:00 PM onwards</p>
-          <p>Mir House, Hyderpora, Srinagar</p>
-        </div>
-      </li>
-    </ul>
-    <p class="closing">Your presence and duas are the only gifts we seek.</p>
-    <p class="from">Awaiting you with open hearts<b>The Wani &amp; Mir Families</b></p>
-    <div class="rsvp"><span>RSVP · Imran Wani</span><span class="num">+91 90000 00000</span></div>
-  </section>
 
-  <div class="seam" aria-hidden="true">
-    <div class="row"><span>
-      <svg viewBox="0 0 100 100" style="color:#C2452D;transform:rotate(-20deg)"><use href="#chinar"/></svg>
-      <svg viewBox="0 0 100 100" style="color:#E2A246"><use href="#chinar"/></svg>
-      <svg viewBox="0 0 100 100" style="color:#C2452D;transform:rotate(20deg)"><use href="#chinar"/></svg>
-    </span></div>
-    <p class="tag" lang="ur" dir="rtl" style="margin:0">اُردو</p>
-  </div>
+    <section class="panel" lang="en" id="panel-en">
+      <p class="bism" lang="ar" dir="rtl">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</p>
+      <p class="grace">With immense pleasure and gratitude to Allah</p>
+      <p class="hosts">Mr. &amp; Mrs. Altaf Hussain</p>
+      <p class="caps place">Nambal · Rawalpora</p>
+      <p class="request">request the honour of your presence at the wedding ceremony of their beloved son</p>
+      <h1 class="name">Ahmed Hussain</h1>
+      <div class="divider" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#chinar"/></svg></div>
+      <p class="venue-k">Marriage Hall</p>
+      <p class="venue">Gooripora, Sanatnagar, Srinagar</p>
+      <a class="map caps" href="https://www.google.com/maps/search/?api=1&amp;query=Marriage+Hall+Gooripora+Sanatnagar+Srinagar" target="_blank" rel="noopener">View on map</a>
+      <p class="caps label">As per programme · Insha'Allah</p>
+      <div class="events">
+        <div class="event"><h3>Masnad Nashini</h3><span class="caps">Sunday</span><span class="date">9 May 2027</span><span class="time">6:00 pm</span></div>
+        <div class="event"><h3>Dawat-e-Walima</h3><span class="caps">Monday</span><span class="date">10 May 2027</span>
+          <span class="times"><span class="time"><span class="caps">Gents</span>2:30 pm</span><span class="time"><span class="caps">Ladies</span>3:30 pm</span></span></div>
+      </div>
+      <p class="note">Esteemed guests are requested to grace the occasion well in time.</p>
+      <div class="foot">
+        <div><span class="caps">With compliments from</span><span class="v">Shuja Hussain</span><span class="v">Mohammad Waseem Hamdani</span></div>
+        <div class="rsvp"><span class="caps">RSVP</span><a href="tel:+919796737141">97967 37141</a><a href="tel:+919796807528">97968 07528</a></div>
+      </div>
+    </section>
 
-  <!-- Urdu -->
-  <section class="panel last" lang="ur" dir="rtl">
-    <div class="opening">
-      <p class="bismillah" lang="ar">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</p>
-    </div>
-    <p class="hosts"><span>بیگم شبنم و جناب بشیر احمد وانی</span><span class="and">اور</span><span>بیگم روبینہ و جناب فاروق احمد میر</span></p>
-    <p class="request">آپ کو مع اہلِ خانہ اپنے بچوں کی تقریبِ نکاح میں شرکت کی پُرخلوص دعوت دیتے ہیں</p>
-    <h2 class="names"><span>مہرین</span><span class="amp">و</span><span>عادل</span></h2>
-    <div class="divider" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#chinar"/></svg></div>
-    <p class="label">سری نگر، اکتوبر ۲۰۲۷</p>
-    <ul class="events">
-      <li>
-        <div class="date"><b>۱۴</b><span>اکتوبر</span><span>جمعرات</span></div>
-        <div class="what">
-          <h3>مینزِ راتھ</h3>
-          <p class="desc">مہندی کی رات</p>
-          <p class="time">شام ۷ بجے سے</p>
-          <p>وانی ہاؤس، راج باغ، سری نگر</p>
-        </div>
-      </li>
-      <li>
-        <div class="date"><b>۱۵</b><span>اکتوبر</span><span>جمعہ</span></div>
-        <div class="what">
-          <h3>نکاح و وازوان</h3>
-          <p class="desc">نکاح، اس کے بعد روایتی کشمیری ضیافت</p>
-          <p class="time">نکاح بعد نمازِ عصر، وازوان شام ساڑھے ۷ بجے</p>
-          <p>ڈل ویو لانز، بُلیوارڈ روڈ، سری نگر</p>
-        </div>
-      </li>
-      <li>
-        <div class="date"><b>۱۶</b><span>اکتوبر</span><span>ہفتہ</span></div>
-        <div class="what">
-          <h3>ولیمہ</h3>
-          <p class="desc">دعوتِ ولیمہ</p>
-          <p class="time">دوپہر ۱ بجے سے</p>
-          <p>میر ہاؤس، حیدرپورہ، سری نگر</p>
-        </div>
-      </li>
-    </ul>
-    <p class="closing">آپ کی شرکت اور دعائیں ہی ہمارے لیے سب سے قیمتی تحفہ ہیں۔</p>
-    <p class="from">چشم براہ<b>وانی و میر خاندان</b></p>
-    <div class="rsvp"><span>رابطہ: عمران وانی</span><span class="num">+91 90000 00000</span></div>
-    <figure class="couplet">
-      <p lang="fa">اگر فردوس بر روئے زمین است<br>ہمیں است و ہمیں است و ہمیں است</p>
-      <figcaption lang="en" dir="ltr">If there is paradise on earth, it is here, it is here, it is here.</figcaption>
-    </figure>
-  </section>
-</article>
-<p class="sample">Sample invitation · names, dates and venues are placeholders</p>
+    <section class="panel" lang="ur" id="panel-ur" dir="rtl" hidden>
+      <p class="bism" lang="ar">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</p>
+      <p class="grace">اللہ تعالیٰ کے شکر اور بے پناہ مسرت کے ساتھ</p>
+      <p class="hosts">جناب و بیگم الطاف حسین</p>
+      <p class="caps place">نمبل، راولپورہ</p>
+      <p class="request">اپنے فرزندِ عزیز کی تقریبِ شادی میں آپ کی باوقار شرکت کے متمنی ہیں</p>
+      <h1 class="name">احمد حسین</h1>
+      <div class="divider" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#chinar"/></svg></div>
+      <p class="venue-k">بمقام: میرج ہال</p>
+      <p class="venue">گوری پورہ، صنعت نگر، سرینگر</p>
+      <a class="map caps" href="https://www.google.com/maps/search/?api=1&amp;query=Marriage+Hall+Gooripora+Sanatnagar+Srinagar" target="_blank" rel="noopener">نقشے پر دیکھیں</a>
+      <p class="caps label">حسبِ پروگرام، ان شاء اللہ</p>
+      <div class="events">
+        <div class="event"><h3>مسند نشینی</h3><span class="caps">اتوار</span><span class="date">۹ مئی ۲۰۲۷</span><span class="time">شام ۶ بجے</span></div>
+        <div class="event"><h3>دعوتِ ولیمہ</h3><span class="caps">پیر</span><span class="date">۱۰ مئی ۲۰۲۷</span>
+          <span class="times"><span class="time"><span class="caps">مرد حضرات</span>دوپہر ۲:۳۰ بجے</span><span class="time"><span class="caps">خواتین</span>سہ پہر ۳:۳۰ بجے</span></span></div>
+      </div>
+      <p class="note">معزز مہمانوں سے گزارش ہے کہ بروقت تشریف لا کر تقریب کی رونق بڑھائیں۔</p>
+      <div class="foot">
+        <div><span class="caps">منجانب</span><span class="v">شجاع حسین</span><span class="v">محمد وسیم ہمدانی</span></div>
+        <div class="rsvp"><span class="caps">رابطہ</span><a href="tel:+919796737141">97967 37141</a><a href="tel:+919796807528">97968 07528</a></div>
+      </div>
+    </section>
+  </article>
+</div>
+<script>
+  (function () {
+    var panels = { en: document.getElementById("panel-en"), ur: document.getElementById("panel-ur") };
+    var buttons = document.querySelectorAll(".switch button");
+    function show(lang) {
+      Object.keys(panels).forEach(function (k) { panels[k].hidden = k !== lang; });
+      buttons.forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.lang === lang)); });
+      document.documentElement.lang = lang;
+      try { history.replaceState(null, "", lang === "ur" ? "#ur" : location.pathname); } catch (e) {}
+    }
+    buttons.forEach(function (b) { b.addEventListener("click", function () { show(b.dataset.lang); }); });
+    show(location.hash === "#ur" || (navigator.language || "").toLowerCase().indexOf("ur") === 0 ? "ur" : "en");
+  })();
+</script>
 </body>
 </html>
